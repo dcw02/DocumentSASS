@@ -1,7 +1,9 @@
-> Updates:<br>
+> Updates:
+>
 > This fork has small updates to the original by [0xD0GF00D](https://github.com/0xD0GF00D)<br>
-> I updated the Makefile to add in new architectures (as well as removing ones that throw errors) along with some comments. Result text output files have also been uploaded into the repository for those that can't run the program.<br>
-> -- David
+> I updated the Makefile to add in new architectures (as well as removing ones that throw errors) along with some comments. Result text output files have also been uploaded into the repository for those that can't run the program.
+>
+> &mdash; David
 
 # DocumentSASS
 The instruction sets for NVIDIA GPUs have a very sparse [official documentation](https://docs.nvidia.com/cuda/cuda-binary-utilities/index.html).
