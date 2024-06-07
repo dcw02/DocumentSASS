@@ -14,9 +14,12 @@ NVDISASM=/opt/cuda/bin/nvdisasm
 PYTHON=python3
 
 # Get the compute capabilities from here: https://developer.nvidia.com/cuda-gpus
-# It doesn't seem to work for any compute capability below sm_50
-#architectures=sm_20 sm_21 sm_30 sm_35 sm_37 sm_50 sm_52 sm_53 sm_60 sm_61 sm_62 sm_70 sm_72 sm_75 sm_80 sm_86 sm_87 sm_89 sm_90
-architectures=sm_50 sm_52 sm_53 sm_60 sm_61 sm_62 sm_70 sm_72 sm_75 sm_80 sm_86 sm_87 sm_89 sm_90
+# Fermi (sm_20 sm_21) is dropped from cuda 10+
+# Generic Kepler (sm_30) is dropped from cuda 11+
+# Kepler (sm_35 sm_37) was deprecated cuda 11+ and probably dropped cuda 12+ as it's erroring on cuda 12.5
+# I've commented out a line containing all (most?) of the architectures, feel free to use other versions of cuda and include/exclude architectures
+#architectures=sm_20 sm_21 sm_30 sm_35 sm_37 sm_50 sm_52 sm_53 sm_60 sm_61 sm_62 sm_70 sm_72 sm_75 sm_80 sm_86 sm_87 sm_89 sm_90 sm_90a
+architectures=sm_50 sm_52 sm_53 sm_60 sm_61 sm_62 sm_70 sm_72 sm_75 sm_80 sm_86 sm_87 sm_89 sm_90 sm_90a
 
 targets = $(architectures:=_instructions.txt) $(architectures:=_latencies.txt)
 
