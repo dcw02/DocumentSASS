@@ -6,7 +6,7 @@ ARCHITECTURE "Volta"
    ELF_ID 190;
    ELF_ABI 0x33;
    ELF_ABI_VERSION 7U;
-   ELF_VERSION 122;
+   ELF_VERSION 125;
    RELOCATORS
   { "R_CUDA_NONE", 0, False, False, 0,0, { { 0, 0} } }
   { "R_CUDA_32", 0xffffffffffffffff, False, False, 0,0, { { 0, 32} } }
@@ -60705,4 +60705,4 @@ BITS_1_90_90_Pp_not = Pp@not;
 BITS_6_121_116_req_bit_set=req_bit_set;
 BITS_3_115_113_src_rel_sb=7;
 BITS_3_112_110_dst_wr_sb=7;
-BITS_8_124_122_109_105_opex=TABLES_opex_0(batch_t,usched_info);
+BITS_8_124_122_109_105_opex=TABLES_opex_0(batch_t,usched_info

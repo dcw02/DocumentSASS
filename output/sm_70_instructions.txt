@@ -6,7 +6,7 @@ ARCHITECTURE "Volta"
    ELF_ID 190;
    ELF_ABI 0x33;
    ELF_ABI_VERSION 7U;
-   ELF_VERSION 122;
+   ELF_VERSION 125;
    RELOCATORS
   { "R_CUDA_NONE", 0, False, False, 0,0, { { 0, 0} } }
   { "R_CUDA_32", 0xffffffffffffffff, False, False, 0,0, { { 0, 32} } }
