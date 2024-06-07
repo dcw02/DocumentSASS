@@ -4,9 +4,9 @@ import sys
 from collections import *
 
 # We used delimiters like the one below to separate different outputs.
-example = "<0x0 0x0 0>"
+example = r"<0x0 0x0 0>"
 # The first value is the destination pointer, the second the src, and the third the size in bytes.
-delimiter = "<0x[\da-f]+ 0x[\da-f]+ [\d]+>"
+delimiter = r"<0x[\da-f]+ 0x[\da-f]+ [\d]+>"
 
 pattern = re.compile(delimiter)
 assert pattern.match(example)
@@ -97,11 +97,11 @@ if __name__ == "__main__":
 
         fname = remsuffix(remsuffix(fname, '.txt'), '_intercept')
         instructions = getfile(data, 'ARCHITECTURE')[:-2]
-        with open(fname + '_instructions.txt', "w") as f:
+        with open('./output/' + fname + '_instructions.txt', "w") as f:
             f.write(instructions)
 
         latencies = getfile(data, 'OPERATION SETS')
-        with open(fname + '_latencies.txt', "w") as f:
+        with open('./output/' + fname + '_latencies.txt', "w") as f:
             f.write(latencies)
 
     if False:
